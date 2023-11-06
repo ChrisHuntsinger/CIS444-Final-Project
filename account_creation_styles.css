@@ -1,0 +1,15 @@
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: auto;
+    padding: 150px;
+    border: solid 5px;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+}
