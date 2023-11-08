@@ -1,0 +1,51 @@
+body {
+    background-color: rgba(14, 6, 107, 0.189);
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+}
+
+image-container {
+   width: 100%;
+   max-width: 300px;
+   text-align: center;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    background-color: rgb(160, 233, 153);
+    /*color: rgba(18, 10, 237, 0.354)*/
+    padding: 10px;
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+
