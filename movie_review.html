@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Review</title>
+    <link rel="stylesheet" type="text/css" href="movie_review_styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+</head>
+<body>
+    <div id="main">
+        <table>
+            <tr>
+                <th id="movie_title">Jurassic Park</th>
+            </tr>
+            <tr>
+                <td>1993 &bull; PG-13 &bull; 2h 7m</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <!-- Movie Poster -->
+                <td class="movie_poster" rowspan="3">
+                    <img src="movie_poster_example.jpg" alt="movie_poster">
+                </td>
+                <!-- Empty Column -->
+                <td rowspan="3" width="10px" "></td>
+                <!-- Movie Trailer -->
+                <td id="movie_trailer_container" colspan="3">
+                    <iframe id="movie_trailer_player" src="https://www.youtube.com/embed/QWBKEmWWL38"></iframe>
+                </td>
+            </tr>
+            <tr>
+                <!-- Empty Row -->
+                <td colspan="3" height="10px"></td>
+            </tr>
+            <tr>
+                <!-- List of actors, directors, producers, etc. -->
+                <td width="190" style="border-style: solid; padding: 5px;">
+                    <strong>Director(s):</strong>
+                    <ul>
+                        <li>Steven Spielberg</li>
+                    </ul>
+                    <strong>Actors:</strong>
+                    <ul>
+                        <li>Sam Neill</li>
+                        <li>Laura Dern</li>
+                        <li>Jeff Goldblum</li>
+                    </ul>
+                </td>
+                <td width="10px"></td>
+                <!-- Short Description of movie plot -->
+                <td style="border-style: solid; padding: 5px;">
+                    <div id="synopsis">
+                        <strong>Synopsis:</strong>
+                        <p>
+                            A pragmatic paleontologist touring an almost complete 
+                            theme park on an island in Central America is tasked with protecting a 
+                            couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Heading for User Reviews -->
+        <p>
+            <table style="width: 1250px;">
+                <th style="text-align: left; font-size: 32px;">User Reviews</th>
+                <th style="text-align: right;">
+                    <button class="write_review_button">Click here to write your own review!</button>
+                </th>
+            </table>
+        </p>
+        <!-- Reviews from other community members -->
+        <p>
+            <div class="user_review_container">
+                <div id="user_post_title">Brilliant!</div>
+                <p>
+                    What can I say? Jurassic Park is one of the most underrated movies ever. Yes, I did say underrated. 
+                    True, it is the fourth highest grossing movie ever (for the time being) and was a motion picture bible 
+                    for eight-year-olds across the country, but it has never been regarded as artistically superior. When, 
+                    in reality, it is one of the most artistically inventive movies ever. It contains all of Spielberg's 
+                    magical strokes of genius from fantastic art direction and wonderful camera techniques to astounding 
+                    technical quality ( which comes from his well known control over technology). The minor flaws of a 
+                    theme park are masterfully embedded into the art direction, script etc. and the acting is superb. 
+                    This is one of the only movies I've seen with great acting by children. Spielberg's camera usage ranges 
+                    from foreshadowing the appearance of dinosaurs with extreme up-angles to exquisitely composed scenes of 
+                    the dinosaurs' "interaction" with the characters. Aside from technical quality, Jurassic Park bears 
+                    powerful social messages of human intrusion and destruction of natural environment and the self-revering 
+                    nature of man. Also, it had an undeniable effect on cinema being one of the first movies to use CGI at 
+                    such a large scale. However, the most ingenious aspect of the film is the portrayal of the dinosaurs 
+                    as animals rather than ruthless monsters. At many times throughout the movie, the humans are portrayed 
+                    as antagonists and the respect and appreciation of the dinosaurs is wonderfully developed. And, best 
+                    of all, like star wars you can analyze the movie all you want or just sit back and enjoy the ride.
+                </p>
+            </div>
+        </p>
+    </div>
+</body>
+</html>
