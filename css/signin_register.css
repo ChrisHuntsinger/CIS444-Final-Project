@@ -1,0 +1,47 @@
+/* Website Logo */
+.logo {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Only visible container */
+.main {
+    position: relative;
+    border: solid 5px;
+    margin: auto;
+    width: 600px;
+}
+
+/* Title of the Page*/
+.title_in_container {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Container for Signin fields */
+.table_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Field Names */
+tr > td > label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Input Boxes */
+.input-box {
+    padding: 5px;
+}
+
+/* Container for Register */
+.other {
+    text-align: center;
+}

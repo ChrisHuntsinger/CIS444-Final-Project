@@ -4,28 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Review</title>
-    <link rel="stylesheet" type="text/css" href="movie_review_styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/movie_review_styles.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 </head>
 <body>
-    <div id="main">
+    <!-- NAV BAR (STILL WORKING ON IT)-->
+    <header class="page-head">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../images/movieIndex.jpg" alt="logo"></a>
+            </div>
+
+            <form class="search-form">
+                <input type="text" class="search-box" placeholder="Search movie...">
+            </form>
+
+            <nav class="site-nav">
+                <ul>
+                    <li class="site-nav__item">Account</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+        <!-- Navigation Bar -->
+        <!-- <div class="topnav">
+            <a href="index.html">
+                <img id="nav_homepage_logo" src="movieIndex.jpg" alt="website_logo">
+            </a>
+            <a href="Account">Account</a>
+        </div> -->
+
+        <!-- Navigation Bar -->
+        <!-- <nav id="navbar">
+            <a id="home" href="index.html">
+                <img id="nav_homepage_logo" src="movieIndex.jpg" alt="website_logo">
+            </a>
+            <input type="text" id="search_bar" placeholder="Search movie...">
+            <a href="profile_page.html">Profile</a>
+        </nav> -->
+
         <table>
+            <!-- Movie Title -->
             <tr>
                 <th id="movie_title">Jurassic Park</th>
             </tr>
+            <!-- Year - Rating - Duration -->
             <tr>
                 <td>1993 &bull; PG-13 &bull; 2h 7m</td>
             </tr>
         </table>
 
-        <table>
-            <tr>
+        <table border="1">
+            <tr id="poster_and_trailer">
                 <!-- Movie Poster -->
-                <td class="movie_poster" rowspan="3">
-                    <img src="movie_poster_example.jpg" alt="movie_poster">
+                <td id="movie_poster_container">
+                    <img id="movie_poster_image" src="../images/movie_poster_example.jpg" alt="movie_poster">
                 </td>
                 <!-- Empty Column -->
-                <td rowspan="3" width="10px" "></td>
+                <td rowspan="3"></td>
                 <!-- Movie Trailer -->
                 <td id="movie_trailer_container" colspan="3">
                     <iframe id="movie_trailer_player" src="https://www.youtube.com/embed/QWBKEmWWL38"></iframe>
@@ -66,7 +104,7 @@
 
         <!-- Heading for User Reviews -->
         <p>
-            <table style="width: 1250px;">
+            <table style="width: 1200px;">
                 <th style="text-align: left; font-size: 32px;">User Reviews</th>
                 <th style="text-align: right;">
                     <button class="write_review_button">Click here to write your own review!</button>

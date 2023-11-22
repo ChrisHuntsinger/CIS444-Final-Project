@@ -1,0 +1,34 @@
+/* Header */
+header {
+    background-color: coral;
+    color: white;
+}
+
+/* Navigation Bar Container */
+.nav_bar {
+    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* Centers items to the middle of the navigation bar */
+    align-items: center;
+    padding: 5px;
+}
+
+/* Actual Logo */
+.logo {
+    max-height: 30px;
+}
+
+/* Search Form */
+.search-form {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+/* Actual Search Input Box */
+.search-box {
+    padding: 5px;
+    width: 75%;
+}
