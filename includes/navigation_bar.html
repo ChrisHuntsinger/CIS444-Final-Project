@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" type="text/css" href="../css/nav_bar.css">
+</head>
+<body>
+    <header>
+        <div class="nav_bar">
+
+            <!-- Logo (User can click this to go to homepage)-->
+            <a href="../pages/index.html"><img src="../images/movieIndex.jpg" alt="Logo" class="logo"></a>
+
+            <!-- Search Bar -->
+            <form class="search-form" action="get">
+                <input type="text" class="search-box" placeholder="Search movie...">
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Account / Profile Section -->
+            <div class="account-profile" id="accountProfileSection"></div>
+
+        </div>
+    </header>
+
+    <script src="../js/nav_bar_account.js"></script>
+</body>
+</html>

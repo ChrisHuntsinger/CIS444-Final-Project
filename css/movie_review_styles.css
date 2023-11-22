@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    background-color: #ededed;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+header {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}*/
+
+.page-head {
+    display: flex;
+    align-items: center;
+    /* margin: 1.5rem; */
+    background-color: rgb(236, 93, 93);
+    padding: 0.5rem;
+}
+
+.navbar {
+    display: flex;
+    /* margin: 1.5rem; */
+    background-color: rgb(212, 183, 183);
+    padding: 0.5rem;
+    width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo > img {
+    max-width: 100%;
+    height: auto;
+    max-height: 30px;
+}
+
+.search-form {
+    margin: 0 1rem;
+    flex-grow: 1;
+    min-width: 18rem;
+}
+
+.search-box {
+    width: 100%;
+    padding: .4rem;
+    background-color: #ffb;
+}
+
+.site-nav > ul {
+    display: flex;
+    margin: 0;
+}
+
+.site-nav__item {
+    flex-shrink: 0;
+
+    list-style-type: none;
+    margin: 0 0.55rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.main {
+    width: 1200px;
+    margin: auto;
+}
+
+#search_bar {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#nav_homepage_logo {
+    float: left;
+    max-height: 50px;
+    height: auto;
+}
+
+#movie_title {
+    text-align: left;
+    font-size: 50px;
+}
+
+table {
+    /*
+    border-style: solid;
+    border-width: 1px;
+    */
+}
+
+#poster_and_trailer {
+    height: 480px;
+}
+
+#movie_poster_container {
+    height: 480px;
+
+    position: relative;
+}
+
+#movie_poster_image {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#movie_trailer_container {
+    width: 854px;
+    height: 480px;
+
+    position: relative;
+}
+
+#movie_trailer_player {
+    width: 100%;
+    height: 100%;
+
+    position: absolute; 
+    top: 0px; 
+    left: 0px;
+}
+
+.write_review_button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.user_review_container {
+    height: 300px;
+    width: 1200px;
+    border: solid;
+    padding: 10px;
+    margin: auto;
+}
+
+#user_post_title {
+    font-size: 24px;
+    font-weight: bold;
+}
