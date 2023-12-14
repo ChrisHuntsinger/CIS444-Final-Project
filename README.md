@@ -1,8 +1,12 @@
 # CIS444-Final-Project
 
-## 12/13/23 Update
+THINGS REQUIRED BEFORE STARTING:
+Database (MAMP)
+API KEY (Ask Lyle for the Authorization or get your own through 'https://www.themoviedb.org/?language=en-US'.
 
+## 12/14/23 Update
 INITIALIZE DATABASE FIRST!
+
 To get database started:
 1. Create new folder 'MovieLovers' under MAMP/htdocs. 
 2. Copy all files from GitHub and paste it under the new folder, 'MovieLovers'.
