@@ -1,7 +1,9 @@
 # CIS444-Final-Project
 
 THINGS REQUIRED BEFORE STARTING:
+
 Database (MAMP)
+
 API KEY (Ask Lyle for the Authorization or get your own through 'https://www.themoviedb.org/?language=en-US'.
 
 ## 12/14/23 Update
@@ -16,11 +18,11 @@ To get database started:
 6. Click on 'SQL' tab.
 7. Run the following queries in order:
 
-'''
+'''sql
 CREATE DATABASE movie_lovers;
 '''
 
-'''
+'''sql
 CREATE TABLE lovers(
   loverID SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first VARCHAR(40),
@@ -31,7 +33,7 @@ CREATE TABLE lovers(
 );
 '''
 
-...
+...sql
 CREATE TABLE reviews (
     reviewID INT PRIMARY KEY AUTO_INCREMENT,
     movieID INT,
