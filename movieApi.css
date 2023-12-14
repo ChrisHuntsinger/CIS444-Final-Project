@@ -1,7 +1,7 @@
 
 body {
     margin: 0; /*Remove default margin to avoid spacing issues */
-    background-color: rgb(39, 64, 4);
+    background-color: rgb(54, 80, 19);
 }
 
 header {
@@ -21,8 +21,8 @@ header {
     font-size: 26px;
     font-family: Arial, Helvetica, sans-serif;
     align-content: center;
-    margin-right: 200px;  /*Adjust spacing between links as needed */
-    color: rgb(112, 37, 5); /* Set text color to white for better visibility */
+    margin-right: 150px;  /*Adjust spacing between links as needed */
+    color: rgb(239, 82, 14); /* Set text color to white for better visibility */
     text-decoration: none; /*remove underlines from links */
 }
 
