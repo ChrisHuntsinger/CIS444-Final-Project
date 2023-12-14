@@ -2,28 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movie Lovers - Homepage</title>
-    <link rel="stylesheet" href="../css/indexfile.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Blog by CEL</title>
+    <!-- CSS for Movies Page -->
+    <link rel="stylesheet" href="../css/movieApi.css">
+    <!-- CSS for Navigation Bar -->
+    <link rel="stylesheet" type="text/css" href="../css/nav_bar.css">
 </head>
 <body>
-    <h2>This page is under construction.  </h2>
-    <div>
-        <class="header">
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="signin.html">Sign in /My Account</a></li>
-                <li><a href="account_creation.html">Sign Up</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="image container">
-            <img src="../images/movieIndex.jpg" alt="movies">
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav_bar">
+            <!-- Logo (User can click this to go to homepage)-->
+            <a href="../pages/index.html"><img src="../images/logo_goldenrod_background.png" alt="Logo" class="logo"></a>
+
+            <!-- Search Bar -->
+            <form class="search-form" action="../pages/index.html" method="get">
+                <input type="text" class="search-box" name="query" placeholder="Search movie...">
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Account / Profile Section / Log Out -->
+            <div id="accountProfileSection"></div>
         </div>
-    </div>
+    </header>
+
+    <main id="main">
+        <div class="movie-container"></div>  
+    </main>
     
+    <script src="../js/myapp.js"></script>
+
+    <!-- Include nav_bar_account.js at the end of the body -->
+    <script src="../js/nav_bar_account.js"></script>
 </body>
-</html>
+</html> 

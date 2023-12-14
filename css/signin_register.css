@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, html {
+    margin: 0px;
+    padding: 0px;
+    background-color: beige;
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* Website Logo */
 .logo {
     position: relative;
