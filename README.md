@@ -7,7 +7,7 @@ Database (MAMP)
 API KEY (Ask Lyle for the Authorization or get your own through 'https://www.themoviedb.org/?language=en-US'.
 
 ## 12/14/23 Update
-INITIALIZE DATABASE FIRST!
+INITIALIZE DATABASE FIRST! THEN UPDATE API KEY IN 2 FILES!
 
 To get database started:
 1. Create new folder 'MovieLovers' under MAMP/htdocs. 
@@ -45,8 +45,6 @@ CREATE TABLE reviews (
 );
 ```
 
-8. On the browser, run 'http://localhost/MovieLovers/pages/index.html'.
-9. You should be able to register an account and log in.
-
-
-Notes: 'Cookies' feature currently disabled until logging out feature works on 'View Profile' page.
+8. In file, "/js/myapp.js" and "/js/load_movie_details.js", replace '(Insert your API Key here)' with API Key.
+9. On the browser, run 'http://localhost/MovieLovers/pages/index.html'.
+10. You should be able to register an account and log in.
