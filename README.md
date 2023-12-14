@@ -1,6 +1,6 @@
 # CIS444-Final-Project
 
-## 11/21/23 Update
+## 12/13/23 Update
 
 To get database started in order to log in or register:
 1. Create new folder 'Movie Lovers' under MAMP/htdocs. 
@@ -25,6 +25,18 @@ CREATE TABLE lovers(
   password VARCHAR(40),
 );
 '''
+
+...
+CREATE TABLE reviews (
+    reviewID INT PRIMARY KEY AUTO_INCREMENT,
+    movieID INT,
+    loverID INT,
+    headline VARCHAR(255),
+    rating INT,
+    review TEXT,
+    FOREIGN KEY (loverID) REFERENCES lovers(loverID)
+);
+...
 
 8. On the browser, run 'http://localhost/MovieLovers/pages/index.html'.
 9. You should be able to register an account and log in.

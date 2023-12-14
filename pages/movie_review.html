@@ -4,104 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Review</title>
+    <!-- CSS for Navigation Bar -->
+    <link rel="stylesheet" type="text/css" href="../css/nav_bar.css">
+    <!-- CSS for Movie Review -->
     <link rel="stylesheet" type="text/css" href="../css/movie_review_styles.css">
+    <!-- Font for the Entire Site -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+    <!-- CSS for Pop-up Modal Write Review -->
+    <link rel="stylesheet" type="text/css" href="../css/modal.css">
 </head>
 <body>
-    <!-- NAV BAR (STILL WORKING ON IT)-->
-    <header class="page-head">
-        <div class="navbar">
-            <div class="logo">
-                <a href="index.html"><img src="../images/movieIndex.jpg" alt="logo"></a>
-            </div>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav_bar">
+            <!-- Logo (User can click this to go to homepage)-->
+            <a href="../pages/index.html"><img src="../images/logo_goldenrod_background.png" alt="Logo" class="logo"></a>
 
-            <form class="search-form">
-                <input type="text" class="search-box" placeholder="Search movie...">
+            <!-- Search Bar -->
+            <form class="search-form" action="../pages/index.html" method="get">
+                <input type="text" class="search-box" name="query" placeholder="Search movie...">
+                <button type="submit">Search</button>
             </form>
 
-            <nav class="site-nav">
-                <ul>
-                    <li class="site-nav__item">Account</li>
-                </ul>
-            </nav>
+            <!-- Account / Profile Section / Log Out -->
+            <div id="accountProfileSection"></div>
         </div>
     </header>
 
     <div class="main">
-        <!-- Navigation Bar -->
-        <!-- <div class="topnav">
-            <a href="index.html">
-                <img id="nav_homepage_logo" src="movieIndex.jpg" alt="website_logo">
-            </a>
-            <a href="Account">Account</a>
-        </div> -->
-
-        <!-- Navigation Bar -->
-        <!-- <nav id="navbar">
-            <a id="home" href="index.html">
-                <img id="nav_homepage_logo" src="movieIndex.jpg" alt="website_logo">
-            </a>
-            <input type="text" id="search_bar" placeholder="Search movie...">
-            <a href="profile_page.html">Profile</a>
-        </nav> -->
-
         <table>
             <!-- Movie Title -->
             <tr>
-                <th id="movie_title">Jurassic Park</th>
+                <th id="movie_title"></th>
             </tr>
             <!-- Year - Rating - Duration -->
             <tr>
-                <td>1993 &bull; PG-13 &bull; 2h 7m</td>
+                <td id="movie_year_dur"></td>
             </tr>
         </table>
 
-        <table border="1">
+        <table>
             <tr id="poster_and_trailer">
                 <!-- Movie Poster -->
                 <td id="movie_poster_container">
-                    <img id="movie_poster_image" src="../images/movie_poster_example.jpg" alt="movie_poster">
+                    <img id="movie_poster_image" src="" alt="movie_poster">
                 </td>
                 <!-- Empty Column -->
-                <td rowspan="3"></td>
+                <td id="movie_poster_empty-column"></td>
                 <!-- Movie Trailer -->
-                <td id="movie_trailer_container" colspan="3">
-                    <iframe id="movie_trailer_player" src="https://www.youtube.com/embed/QWBKEmWWL38"></iframe>
-                </td>
-            </tr>
-            <tr>
-                <!-- Empty Row -->
-                <td colspan="3" height="10px"></td>
-            </tr>
-            <tr>
-                <!-- List of actors, directors, producers, etc. -->
-                <td width="190" style="border-style: solid; padding: 5px;">
-                    <strong>Director(s):</strong>
-                    <ul>
-                        <li>Steven Spielberg</li>
-                    </ul>
-                    <strong>Actors:</strong>
-                    <ul>
-                        <li>Sam Neill</li>
-                        <li>Laura Dern</li>
-                        <li>Jeff Goldblum</li>
-                    </ul>
-                </td>
-                <td width="10px"></td>
-                <!-- Short Description of movie plot -->
-                <td style="border-style: solid; padding: 5px;">
-                    <div id="synopsis">
-                        <strong>Synopsis:</strong>
-                        <p>
-                            A pragmatic paleontologist touring an almost complete 
-                            theme park on an island in Central America is tasked with protecting a 
-                            couple of kids after a power failure causes the park's cloned dinosaurs to run loose.
-                        </p>
-                    </div>
+                <td id="movie_trailer_container">
+                    <iframe id="movie_trailer_player" src=""></iframe>
                 </td>
             </tr>
         </table>
 
+        <p>
+            <h3>Synopsis</h3>
+            <hr>
+            <div id="synopsis"></div>
+        </p>
+
+        <p>
+            <h3>Director(s)</h3>
+            <hr>
+            <div id="directors"></div>
+        </p>
+        
+        <p>
+            <h3>Cast</h3>
+            <hr>
+            <div id="cast_members"></div>
+        </p>
+        
         <!-- Heading for User Reviews -->
         <p>
             <table style="width: 1200px;">
@@ -113,28 +87,66 @@
         </p>
         <!-- Reviews from other community members -->
         <p>
-            <div class="user_review_container">
-                <div id="user_post_title">Brilliant!</div>
+            <div id="users_reviews_container">
+                <table id="review-heading">
+                    <td id="review-title_container">
+                        <div id="review_title">Title of Review</div>
+                    </td>
+                    <td id="review-rating_container">
+                        <div id="review_rating">Rating: 5/5</div>
+                    </td>
+                </table>
+                <div id="user">Username</div>
                 <p>
-                    What can I say? Jurassic Park is one of the most underrated movies ever. Yes, I did say underrated. 
-                    True, it is the fourth highest grossing movie ever (for the time being) and was a motion picture bible 
-                    for eight-year-olds across the country, but it has never been regarded as artistically superior. When, 
-                    in reality, it is one of the most artistically inventive movies ever. It contains all of Spielberg's 
-                    magical strokes of genius from fantastic art direction and wonderful camera techniques to astounding 
-                    technical quality ( which comes from his well known control over technology). The minor flaws of a 
-                    theme park are masterfully embedded into the art direction, script etc. and the acting is superb. 
-                    This is one of the only movies I've seen with great acting by children. Spielberg's camera usage ranges 
-                    from foreshadowing the appearance of dinosaurs with extreme up-angles to exquisitely composed scenes of 
-                    the dinosaurs' "interaction" with the characters. Aside from technical quality, Jurassic Park bears 
-                    powerful social messages of human intrusion and destruction of natural environment and the self-revering 
-                    nature of man. Also, it had an undeniable effect on cinema being one of the first movies to use CGI at 
-                    such a large scale. However, the most ingenious aspect of the film is the portrayal of the dinosaurs 
-                    as animals rather than ruthless monsters. At many times throughout the movie, the humans are portrayed 
-                    as antagonists and the respect and appreciation of the dinosaurs is wonderfully developed. And, best 
-                    of all, like star wars you can analyze the movie all you want or just sit back and enjoy the ride.
+                    <div id="user-review">User's Review</div>
                 </p>
             </div>
         </p>
     </div>
+
+    <!-- Modal for writing reviews -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Review</h2>
+            <form id="reviewForm" action="../php/submit_review.php" method="post">
+                <input type="hidden" id="movieId" name="movieId">
+                <p>
+                    <label for="rating">Overall Rating</label><br>
+                    <select id="rating" name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                <hr>
+                <p>
+                    <label for="headline">Add a headline</label><br>
+                    <input type="text" id="headline" name="headline" placeholder="What's most important to know?" required>
+                </p>
+                <hr>
+                <p>
+                    <label for="reviewContent">Add a written review</label><br>
+                    <textarea id="reviewContent" name="reviewContent" placeholder="What did you like or dislike? Why did you watch this movie?" required></textarea>
+                </p>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <!-- Update Navigation Bar -->
+    <script src="../js/nav_bar_account.js"></script>
+
+    <!-- Update Movie Details -->
+    <script src="../js/load_movie_details.js"></script>
+    
+    <!-- Update Write Review Button -->
+    <script src="../js/modal_script.js"></script>
+
+    <!-- Load Reviews for model -->
+    <script src="../js/load_reviews.js"></script>
 </body>
 </html>

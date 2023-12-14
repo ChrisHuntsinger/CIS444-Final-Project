@@ -33,16 +33,6 @@
         exit("<p>The email address you entered is already registered! Click your browser's Back button to return to the previous page.</p>");
     }
 
-    // $result = $pdo->query($sql);
-    // while ($row = $result->fetch()) {
-    //     // Find email that matches the field from the table
-    //     if ($row['email'] == $Email)
-    //         exit("<p>The email address you entered is already registered! Click your browser's Back button to return to the previous page.</p>");
-    // }
-
-    // Insert new user data to the table
-    // $sql = "INSERT INTO $TableName VALUES (NULL, '$Email','$Password',NULL,NULL,NULL,NULL,NULL,NULL,NULL)";
-
     // Insert new user data to the table using a prepared statement
     $sql = "INSERT INTO $TableName (first, last, email, username, password) VALUES (:first, :last, :email, :username, :password)";
     $stmt = $pdo->prepare($sql);
@@ -53,22 +43,13 @@
     $stmt->bindParam(':password', $Password);
     $stmt->execute();
 
-    // $sql = "INSERT INTO $TableName (first, last, email, username, password) VALUES ('$First', '$Last', '$Email', '$Username', '$Password')";
-    // $pdo->exec($sql);
-
-    // Retrieve the loversID
-    // $sql = "SELECT * FROM $TableName WHERE email = '$Email'";
-    // $result = $pdo->query($sql);
-    // if ($row = $result->fetch())
-    //     $LoverID = $row['loverID'];
-
     // Retrieve the loverID
     $loverID = $pdo->lastInsertId();
 
-    // Start the session and store user information - UNCOMMENT THIS WHEN USER CAN LOG OUT - LYLE
-    // session_start();
-    // $_SESSION['loverID'] = $loverID;
-    // $_SESSION['username'] = $Username;
+    // Start the session and store user information
+    session_start();
+    $_SESSION['loverID'] = $loverID;
+    $_SESSION['username'] = $Username;
 
     // Closes the connection and frees the resources used by the PDO object
     $pdo = null;
@@ -76,7 +57,7 @@
 
     <!-- Confirm Message -->
     <p>You're now a Movie Lover!</p>
-    <p><a href="index.html">Click here to go back to homepage!</a></p>
+    <p><a href="../pages/index.html">Click here to go back to homepage!</a></p>
 
 </body>
 </html>

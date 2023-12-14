@@ -1,6 +1,6 @@
 /* Header */
 header {
-    background-color: coral;
+    background-color: #DAA520;
     color: white;
 }
 
@@ -31,4 +31,20 @@ header {
 .search-box {
     padding: 5px;
     width: 75%;
+}
+
+/* Account/Profile Buttons */
+button {
+    background-color: #DAA520;
+    color: black;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Add margin between buttons */
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #f5b617;
 }

@@ -9,22 +9,21 @@
 <body>
     <header>
         <div class="nav_bar">
-
             <!-- Logo (User can click this to go to homepage)-->
             <a href="../pages/index.html"><img src="../images/movieIndex.jpg" alt="Logo" class="logo"></a>
 
             <!-- Search Bar -->
-            <form class="search-form" action="get">
-                <input type="text" class="search-box" placeholder="Search movie...">
+            <form class="search-form" action="../pages/movies.html" method="get">
+                <input type="text" class="search-box" name="query" placeholder="Search movie...">
                 <button type="submit">Search</button>
             </form>
 
             <!-- Account / Profile Section -->
-            <div class="account-profile" id="accountProfileSection"></div>
-
+            <div id="accountProfileSection"></div>
         </div>
     </header>
 
+    <!-- Include nav_bar_account.js at the end of the body -->
     <script src="../js/nav_bar_account.js"></script>
 </body>
 </html>

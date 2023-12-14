@@ -24,7 +24,6 @@
             WHERE email = :email
             AND password = :password";
     
-    //$result = $pdo->query($sql);
 
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':email', $Email);
@@ -32,21 +31,15 @@
     $stmt->execute();
 
     // Fetch the user data
-    // if (!$row = $result->fetch())
-    //     exit("You must enter a valid email address and password. Click your browser's Back button to return to the previous page.</p>");
-    // else
-    //     $loverID = $row['loverID'];
-
-    // Fetch the user data
     if (!$row = $stmt->fetch()) {
         exit("<p>You must enter a valid email address and password. Click your browser's Back button to return to the previous page.</p>");
     }
-    // else {
-    //     // Start the session and store user information - UNCOMMENT THIS WHEN USER CAN LOG OUT - LYLE
-    //     // session_start();
-    //     // $_SESSION['loverID'] = $row['loverID'];
-    //     // $_SESSION['username'] = $row['username'];
-    // }
+    else {
+        // Start the session and store user information
+        session_start();
+        $_SESSION['loverID'] = $row['loverID'];
+        $_SESSION['username'] = $row['username'];
+    }
     
     // Close the connection and free the resources used by the PDO object
     $pdo = null;
@@ -54,7 +47,7 @@
 
     <!-- Send user to homepage -->
     <p>You're logged in!</p>
-    <p><a href="index.html">Click here to go back to homepage!</a></p>
+    <p><a href="../pages/index.html">Click here to go back to homepage!</a></p>
 
 </body>
 </html>
