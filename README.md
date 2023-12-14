@@ -18,11 +18,11 @@ To get database started:
 6. Click on 'SQL' tab.
 7. Run the following queries in order:
 
-'''sql
+```sql
 CREATE DATABASE movie_lovers;
-'''
+```
 
-'''sql
+```sql
 CREATE TABLE lovers(
   loverID SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   first VARCHAR(40),
@@ -31,9 +31,9 @@ CREATE TABLE lovers(
   username VARCHAR(40), 
   password VARCHAR(40),
 );
-'''
+```
 
-...sql
+```sql
 CREATE TABLE reviews (
     reviewID INT PRIMARY KEY AUTO_INCREMENT,
     movieID INT,
@@ -43,7 +43,7 @@ CREATE TABLE reviews (
     review TEXT,
     FOREIGN KEY (loverID) REFERENCES lovers(loverID)
 );
-...
+```
 
 8. On the browser, run 'http://localhost/MovieLovers/pages/index.html'.
 9. You should be able to register an account and log in.
