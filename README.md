@@ -2,7 +2,8 @@
 
 ## 12/13/23 Update
 
-To get database started in order to log in or register:
+INITIALIZE DATABASE FIRST!
+To get database started:
 1. Create new folder 'MovieLovers' under MAMP/htdocs. 
 2. Copy all files from GitHub and paste it under the new folder, 'MovieLovers'.
 3. Run MAMP.
