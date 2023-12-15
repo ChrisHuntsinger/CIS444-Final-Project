@@ -39,6 +39,8 @@
         session_start();
         $_SESSION['loverID'] = $row['loverID'];
         $_SESSION['username'] = $row['username'];
+        setcookie('username', $row['username'], time() + (86400 * 30), "/", "localhost");
+        session_write_close();
     }
     
     // Close the connection and free the resources used by the PDO object
