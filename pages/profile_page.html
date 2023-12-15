@@ -4,19 +4,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Account Page</title>
+	<!-- nav bar CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/nav_bar.css">
+	<!-- profile page CSS -->
 	<link rel="stylesheet" type="text/css" href="../css/profile_pagestyle.css">
 </head>
 <body>
-	<h1 id = "title">
-		<img id = "webPageTitle" src = "../images/movieIndex.jpg" alt = "Webpage Title">
-	</h1>
-	<div>
-		 <ul id = "navBar">
-  			<li id = "navHome"><a href="index.html">Home</a></li>
-  			<li id = "navAccount"><a href="profile_page.html">Account</a></li>
-  			<li id = navMovies><a href="movies.html">Movies</a></li>
-		</ul> 
-	</div>
+	  <header>
+        <div class="nav_bar">
+            <!-- Logo (User can click this to go to homepage)-->
+            <a href="../pages/index.html"><img src="../images/logo_goldenrod_background.png" alt="Logo" class="logo"></a>
+
+            <!-- Search Bar -->
+            <form class="search-form" action="../pages/index.html" method="get">
+                <input type="text" class="search-box" name="query" placeholder="Search movie...">
+                <button type="submit">Search</button>
+            </form>
+
+            <!-- Account / Profile Section / Log Out -->
+            <div id="accountProfileSection"></div>
+        </div>
+    </header>
+
 	<div id = "userProfilePicture">
 		<img id = "profilePic" src = "" alt = "Profile Picture">
 	</div>
@@ -25,7 +34,18 @@
 		<ul>
 			<li>Name
 				<ul>
-					<li>userName</li>
+					<?php
+						session_start();
+
+						if(isset($_COOKIE['username']))
+						{
+							$username = $_COOKIE['username'];
+							$TableName = "lovers";							
+						}
+					?>
+					<li>
+						<span id = "userName"><?php echo $username; ?></span>
+					</li>
 				</ul>
 			</li>
 
@@ -33,12 +53,9 @@
 		<ul>
 			<li>Favorite Movie
 				<ul>
-					<li>
-						movieName
-					</li>
-				</ul>
+					<button onclick="allowEdit('favoriteMovie')">Edit Movie</button>
+				</ul> 
 			</li>
-
 		</ul>
 		<ul>
 			<li>Least Favorite Movie
@@ -48,13 +65,16 @@
 			</li>
 
 		</ul>
-		<ul>
-			<li>Community Approval
-				<ul>
-					<li>Community Approval Number</li>
-				</ul>
-			</li>
-		</ul>
+		<script type="text/javascript">
+			function allowEdit(elementId)
+			{
+				var favMov = document.getElementById(elementId);
+
+				element.contentEditable = contentEditable === "false" ? "true" : false;
+
+				element.classList.toggle("editable");
+			}
+		</script>
 	</div>
 	<div id = "userReviewsLeft">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
